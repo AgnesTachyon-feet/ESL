@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from ultralytics.models.yolo.detect import DetectionPredictor # ->  from ultralytics.yolo.v8.detect.predict import DetectionPredictor
 import cv2
 
-model = YOLO("best.pt")
+model = YOLO("bestplus3.pt")
 
-result = model.predict(source="0", show=True) # accepts all formats - img/floder/vid.* ()
+result = model.predict(source="0", show=True, conf=0.7) # accepts all formats - img/floder/vid.* ()
 print(result)
