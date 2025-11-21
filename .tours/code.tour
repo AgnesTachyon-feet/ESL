@@ -1,0 +1,12 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "code",
+  "steps": [
+    {
+      "file": "RealTime_yolov8.py",
+      "description": "",
+      "line": 5,
+      "contents": "from ultralytics import YOLO\r\nfrom ultralytics.models.yolo.detect import DetectionPredictor # ->  from ultralytics.yolo.v8.detect.predict import DetectionPredictor\r\nimport cv2\r\n\r\nmodel = YOLO(\"bestplus3.pt\")\r\n\r\nresult = model.predict(source=\"0\", show=True, conf=0.7) # accepts all formats - img/floder/vid.* ()\r\nprint(result)"
+    }
+  ]
+}
